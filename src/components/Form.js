@@ -1,13 +1,15 @@
 import { useState } from "react";
 
-
 const Form = (props) => {
-
+    // console.log(props)
     const [userInput, setUserInput] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // setUserInput("");
+        // props.setData('I like forms!');
+        props.pokemon(userInput);
+        // console.log(event)
+        setUserInput("");
     }
 
     const handleUserInput = (event) => {
