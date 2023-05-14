@@ -6,7 +6,6 @@ const Form = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // props.setData('I like forms!');
         props.pokemon(userInput);
         // console.log(event)
         setUserInput("");

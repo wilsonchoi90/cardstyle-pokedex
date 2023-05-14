@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const DisplayPokemon = ({showPokemon}) => {
     console.log(showPokemon)
-    if(!showPokemon) return <div>No pokemon entered yet!</div>
+    if(!showPokemon) return <div>No pokemon searched</div>
     
     return (
         <li className="pokemonContainer">
@@ -24,7 +24,7 @@ const DisplayPokemon = ({showPokemon}) => {
 
                     <div className="lineFour">
                         <p>{showPokemon.typeOne.charAt(0).toUpperCase() + showPokemon.typeOne.slice(1)}</p>
-                        {/* <p>{showPokemon.typeTwo}</p> */}
+                        <p>{showPokemon.typeTwo}</p>
                     </div>
 
                     <div className="lineFive">
