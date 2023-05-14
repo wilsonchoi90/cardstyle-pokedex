@@ -26,11 +26,13 @@ function App() {
         //   } else {
         //   return "N/A";
 
+        
+
       const pokemonStatistics = {
         number: objectOne.id,
         name: objectOne.name,
         sprite: objectOne.sprites.front_default,
-        weight: objectOne.weight * 0.22,
+        weight: objectOne.weight,
         height: objectOne.height,
         typeOne: objectOne.types[0].type.name,
         // typeTwo: objectOne.types[1].type.name,
