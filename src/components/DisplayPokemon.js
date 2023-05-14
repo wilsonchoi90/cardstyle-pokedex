@@ -31,7 +31,6 @@ const DisplayPokemon = ({showPokemon}) => {
                         <p>{showPokemon.bio.flavor_text}</p>
                     </div>
                 </div>
-
             }
         </li>
     )

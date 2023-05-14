@@ -5,29 +5,18 @@ import DisplayPokemon from './components/DisplayPokemon';
 import axios from 'axios';
 import { useState } from 'react';
 
-
 function App() {
   const [pokemonData, setPokemonData] = useState();
 
   const singlePokemon = (pokemon) => {
     axios.all([
-      axios.get(`https://pokeapi.co/api/v2/pokemon/6`),
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`),
       axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.toLowerCase()}`)
 
     ]).then(axios.spread((obj1, obj2) => {
 
       const objectOne = obj1.data;
       const objectTwo = obj2.data;
-      // const typeArray = objectOne.types
-
-      // if (typeArray > 1) {
-        
-      // } else {
-      //   console.log(typeArray);
-      //   return 
-      //   console.log("N/A")
-      // }
-      
 
       const pokemonStatistics = {
         number: objectOne.id,
@@ -36,23 +25,23 @@ function App() {
         weight: objectOne.weight,
         height: objectOne.height,
         typeOne: objectOne.types[0].type.name,
-        typeTwo: objectOne.types[1].type.name,
+        typeTwo: (objectOne.types.length > 1 ? objectOne.types[1].type.name : "N/A"),
         bio: objectTwo.flavor_text_entries.filter((obj) => { return obj.language.name === 'en' })[0],
       }
-      console.log(pokemonStatistics)
       setPokemonData(pokemonStatistics);
-    })).catch((error) => {
+      })).catch ((error) => {
       alert(`Pokemon not found! Please check the spelling!`)
-    })    
+    })  
   }
   
   return (
     <div className="App">
       <Header />
-      <Form pokemon={singlePokemon} />
+      <Form pokemonFunction={singlePokemon} />
       <DisplayPokemon showPokemon={pokemonData} />
     </div>
   );
 }
 
 export default App;
+

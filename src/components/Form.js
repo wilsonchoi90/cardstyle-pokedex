@@ -6,12 +6,12 @@ const Form = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.pokemon(userInput);
-        // console.log(event)
+        props.pokemonFunction(userInput);
         setUserInput("");
     }
 
     const handleUserInput = (event) => {
+        console.log(event.target.value)
         setUserInput(event.target.value);
     }
 
