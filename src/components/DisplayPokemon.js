@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const DisplayPokemon = ({showPokemon}) => {
     console.log(showPokemon)
     if(!showPokemon) return <div>No pokemon searched</div>
