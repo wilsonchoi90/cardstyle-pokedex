@@ -38,6 +38,7 @@ input {
 /* GLOBAL*/
 
 .App {
+    height: 120vh;
     background: #000;
 }
 
@@ -177,16 +178,11 @@ button {
         -webkit-text-stroke: 4px #2b6eb6;
     }
 
-    
-    .special,
-    .pokemonCardContainer {
+    .wrapperSpecial,
+    .pokemonCardContainer, 
+    .pokemonCardDisplay {
         width: 100%;
     }
-
-    .pokemonCardDisplay {
-        width: 100%
-    }
-
 }
 
 

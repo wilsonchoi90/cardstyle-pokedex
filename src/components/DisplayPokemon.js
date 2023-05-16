@@ -20,7 +20,7 @@ const DisplayPokemon = ({showPokemon}) => {
     return (
         <div className="displayPokemonSection">
             {   
-                <div className="wrapper">
+                <div className="wrapperSpecial">
                     <div className="pokemonCardContainer">
                         <div className="pokemonCardDisplay">
 
