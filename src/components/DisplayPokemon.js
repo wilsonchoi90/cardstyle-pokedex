@@ -1,36 +1,64 @@
 const DisplayPokemon = ({showPokemon}) => {
-    console.log(showPokemon)
-    if(!showPokemon) return <div>No pokemon searched</div>
+    if(!showPokemon) return (
+        <div className="noPokemonSection">
+            <div className="wrapper">
+                <div className="noPokemon">
+                    <p>No pokemon searched!</p>
+                </div>
+            </div>
+        </div>
+    )
     
+    const pokemonHeight = Math.round(showPokemon.height * 3.93);
+
+    function convertInchesToFeetAndInches(inches) {
+        const feet = Math.floor(inches / 12);
+        const remainingInches = inches % 12;
+        return `${feet}'${remainingInches}"`
+    }
+
     return (
-        <li className="pokemonContainer">
+        <div className="displayPokemonSection">
             {   
-                <div>
-                    <div className="lineOne">
-                        <p>{showPokemon.name.charAt(0).toUpperCase() + showPokemon.name.slice(1)}</p>
-                        <p>#{showPokemon.number}</p>
-                    </div>
+                <div className="wrapper">
+                    <div className="pokemonCardContainer">
+                        <div className="pokemonCardDisplay">
 
-                    <div className="lineTwo">
-                        <img src={showPokemon.sprite} alt="" />
-                    </div>
+                            <div className="wrapperBorder">
+                                <div className="lineOne">
+                                    <p>{showPokemon.name.charAt(0).toUpperCase() + showPokemon.name.slice(1)}</p>
+                                    <p>#{showPokemon.number}</p>
+                                </div>
+                            </div>
 
-                    <div className="lineThree">
-                        <p>{Math.round(showPokemon.weight * 0.22)} lbs</p>
-                        <p>{Math.round(showPokemon.height * 3.93)}" </p>
-                    </div>
 
-                    <div className="lineFour">
-                        <p>{showPokemon.typeOne.charAt(0).toUpperCase() + showPokemon.typeOne.slice(1)}</p>
-                        <p>{showPokemon.typeTwo}</p>
-                    </div>
+                            <div className="lineTwo">
+                                <img src={showPokemon.sprite} alt="" />
+                            </div>
 
-                    <div className="lineFive">
-                        <p>{showPokemon.bio.flavor_text}</p>
+                            <div className="wrapperBorder"> 
+                                <div className="lineThree">
+                                    <p>Weight: {Math.round(showPokemon.weight * 0.22)}lbs</p>
+                                    <p>Height: {convertInchesToFeetAndInches(pokemonHeight)}</p>
+                                </div>
+                            </div>    
+
+                            <div className="wrapperBorder">
+                                <div className="lineFour">
+                                    <p>Type: {showPokemon.typeOne.charAt(0).toUpperCase() + showPokemon.typeOne.slice(1)}</p>
+                                    <p>Type: {showPokemon.typeTwo.charAt(0).toUpperCase() + showPokemon.typeTwo.slice(1)}</p>
+                                </div>
+                            </div>
+
+                            <div className="lineFive">
+                                <p>{showPokemon.bio.flavor_text}</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             }
-        </li>
+        </div>
     )
 }
 

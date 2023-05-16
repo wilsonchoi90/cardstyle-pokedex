@@ -1,9 +1,13 @@
 const Header = () => {
 
     return (
-        <header>
-            <h1>Pokedex!</h1>
-        </header>
+
+        <div className="header">
+            <div className="wrapper">
+                <h1>Card-Style Pokedex!</h1>
+            </div>
+        </div>
+
     );
 };
 

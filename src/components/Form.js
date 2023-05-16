@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const Form = (props) => {
-    // console.log(props)
     const [userInput, setUserInput] = useState("");
 
     const handleSubmit = (event) => {
@@ -16,10 +15,16 @@ const Form = (props) => {
     }
 
     return (
-        <form action="" onSubmit={handleSubmit}>
-            <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokemon!" />
-        </form>    
-    )
+        <div className="formSection">
+            <div className="wrapper">
+                <form action="" onSubmit={handleSubmit}>
+                    <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokemon!" />
+                    <button>Search!</button>
+                </form>    
+            </div>
+        </div>
+        )
+
 }
 
 export default Form;
