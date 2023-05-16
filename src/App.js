@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Form from './components/Form'
 import DisplayPokemon from './components/DisplayPokemon';
+import Footer from './components/Footer';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -30,6 +31,7 @@ function App() {
     setPokemonData(pokemonStatistics);
     })).catch ((error) => {
     	alert(`Pokemon not found! Please check the spelling or Pokemon number!`)
+
     })  
 }
   
@@ -39,6 +41,7 @@ function App() {
         		<Header />
         		<Form pokemonFunction={singlePokemon} />
         		<DisplayPokemon showPokemon={pokemonData} />
+				<Footer />
       		</div>
     	</div>
   	);
