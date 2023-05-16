@@ -39,7 +39,7 @@ input {
 
 .App {
     height: 120vh;
-    background: linear-gradient(111.4deg, rgb(246, 4, 26) 0.4%, rgb(251, 139, 34) 100.2%);
+    background: #000;
 }
 
 .header,
@@ -56,10 +56,12 @@ input {
 /* HEADER SECTION */
 
 h1 {
+    color: #ffcc00;
+    -webkit-text-stroke: 4px #2b6eb6;
     font-family: 'Pokemon Solid', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 0.2rem;
-    line-height: 4rem;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,8 +107,8 @@ button {
     display: flex;
     flex-direction: column;
     width: 350px;
-    background-color: #c9c6c5;
-    border: 15px solid #f2cd1d;
+    background-color: #c0c0c0;
+    border: 15px solid #ffcc00;
     border-radius: 10px;
     margin: 10px 0;
 }
@@ -129,7 +131,7 @@ button {
 
 .lineTwo img {
     background-color: #fff;
-    border: 3px solid #f2cd1d;
+    border: 3px solid #ffcc00;
     box-shadow: 5px 5px 5px #000;
     border-radius: 1%;
     width: 150px;
@@ -152,12 +154,13 @@ button {
 
 
 
-@media (max-widt: 497px) {
+@media (max-widt: 495px) {
     .pokemonCardDisplay {
-        display: block;
-        position: fixed;
+
         width: 100%;
     }
+
+
 }
 
 
