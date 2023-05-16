@@ -8,16 +8,17 @@ html { box-sizing: border-box;}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* Global */
+/* GLOBAL */
 html {
-  font-size: 20px;
-  font-family: 'Raleway', 'Roboto', Arial, sans-serif;
-  scroll-behavior: smooth;
+    font-size: 20px;
+    font-family: 'Raleway', 'Roboto', Arial, sans-serif;
+    scroll-behavior: smooth;
+    background: #000;
 }
 
 .wrapper {
-  width: 80%;
-  margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 h1,
@@ -34,18 +35,10 @@ input {
     padding: 0;
 }
 
-
-/* GLOBAL*/
-
-.App {
-    height: 120vh;
-    background: #000;
-}
-
 .header,
 .formSection,
 .noPokemonSection,
-.displayPokemonSection
+.displayPokemonSection,
 .footerSection {
     display: flex;
     justify-content: center;
@@ -53,7 +46,6 @@ input {
     padding: 25px 0;
     background: #000;
 }
-
 
 /* HEADER SECTION */
 
@@ -81,12 +73,15 @@ form {
 input {
     justify-content: center;
     align-items: center;
+    padding: 5px;
     margin: 10px 5px;
 }
 
 button {
     cursor: pointer;
     margin: 10px 5px;
+    padding: 5px;
+    background-color: white;
 }
 
 /* NO POKEMON */
@@ -98,7 +93,6 @@ button {
 .noPokemon p {
     color: #ffcc00;
 }
-
 
 /* DISPLAY POKEMON */
 
@@ -183,7 +177,15 @@ button {
     .pokemonCardDisplay {
         width: 100%;
     }
+
+    .lineThree,
+    .lineFour,
+    .lineFive p {
+        font-size: 0.8rem;
+    }
 }
+
+
 
 
 
