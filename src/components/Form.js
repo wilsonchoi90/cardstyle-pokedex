@@ -18,7 +18,7 @@ const Form = (props) => {
         <div className="formSection">
             <div className="wrapper">
                 <form action="" onSubmit={handleSubmit}>
-                    <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokemon!" />
+                    <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokemon or #!" />
                     <button>Search!</button>
                 </form>    
             </div>

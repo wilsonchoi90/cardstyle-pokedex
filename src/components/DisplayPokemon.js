@@ -38,15 +38,15 @@ const DisplayPokemon = ({showPokemon}) => {
 
                             <div className="wrapperBorder"> 
                                 <div className="lineThree">
-                                    <p>Weight: {Math.round(showPokemon.weight * 0.22)}lbs</p>
-                                    <p>Height: {convertInchesToFeetAndInches(pokemonHeight)}</p>
+                                    <p><span>Weight:</span> {Math.round(showPokemon.weight * 0.22)}lbs</p>
+                                    <p><span>Height:</span>  {convertInchesToFeetAndInches(pokemonHeight)}</p>
                                 </div>
                             </div>    
 
                             <div className="wrapperBorder">
                                 <div className="lineFour">
-                                    <p>Type: {showPokemon.typeOne.charAt(0).toUpperCase() + showPokemon.typeOne.slice(1)}</p>
-                                    <p>Type: {showPokemon.typeTwo.charAt(0).toUpperCase() + showPokemon.typeTwo.slice(1)}</p>
+                                    <p><span>Type:</span> {showPokemon.typeOne.charAt(0).toUpperCase() + showPokemon.typeOne.slice(1)}</p>
+                                    <p><span>Type:</span> {showPokemon.typeTwo.charAt(0).toUpperCase() + showPokemon.typeTwo.slice(1)}</p>
                                 </div>
                             </div>
 

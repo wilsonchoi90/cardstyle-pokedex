@@ -128,6 +128,7 @@ button {
 
 .lineOne p {
     font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .lineTwo img {
@@ -152,6 +153,10 @@ button {
     text-align: center;
 }
 
+span {
+    font-weight: 700;
+}
+
 /* FOOTER SECTION */
 
 .footerSection {
@@ -161,6 +166,7 @@ button {
 
 .footerSection p {
     color: #ffcc00;
+    font-size: 0.6rem;
     text-align: center;
     margin: 10px 0;
 }
@@ -169,6 +175,7 @@ button {
 
     .header h1 {
         font-size: 3.5rem;
+        letter-spacing: 0.4rem;
         -webkit-text-stroke: 4px #2b6eb6;
     }
 
