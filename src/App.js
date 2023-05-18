@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 function App() {
+
 	const [pokemonData, setPokemonData] = useState();
 
 	const singlePokemon = (pokemon) => {
@@ -29,16 +30,17 @@ function App() {
         	typeOne: objectOne.types[0].type.name,
         	typeTwo: (objectOne.types.length > 1 ? objectOne.types[1].type.name : "N/A"),
 			bio: (objectTwo.flavor_text_entries.length > 0 ? objectTwo.flavor_text_entries.filter((obj) => { return obj.language.name === 'en' })[0] : "N/A")
-			
 		}
     setPokemonData(pokemonStatistics);
-    })).catch ((error) => {
-    	alert(`Pokemon not found! Please check the spelling or Pokemon number!`)
 
+    })).catch ((error) => {
+
+		alert(`Pokémon not found! Please check the spelling or Pokémon number!`)
     })  
 }
   
 	return (
+
     	<div className="App">
       		<div className="wrapper">
         		<Header />
@@ -47,8 +49,8 @@ function App() {
 				<Footer />
       		</div>
     	</div>
-  	);
-}
+  	)
+};
 
 export default App;
 

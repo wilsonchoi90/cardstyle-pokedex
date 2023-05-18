@@ -1,9 +1,10 @@
 const DisplayPokemon = ({showPokemon}) => {
     if(!showPokemon) return (
+
         <div className="noPokemonSection">
             <div className="wrapper">
                 <div className="noPokemon">
-                    <p>No pokemon searched!</p>
+                    <p>Get information on a Pokémon by searching their name or number from #1-1010!</p>
                 </div>
             </div>
         </div>
@@ -15,7 +16,7 @@ const DisplayPokemon = ({showPokemon}) => {
         const feet = Math.floor(inches / 12);
         const remainingInches = inches % 12;
         return `${feet}'${remainingInches}"`
-    }
+    };
 
     return (
         <div className="displayPokemonSection">
@@ -23,14 +24,12 @@ const DisplayPokemon = ({showPokemon}) => {
                 <div className="wrapperSpecial">
                     <div className="pokemonCardContainer">
                         <div className="pokemonCardDisplay">
-
                             <div className="wrapperBorder">
                                 <div className="lineOne">
                                     <p>{showPokemon.name.charAt(0).toUpperCase() + showPokemon.name.slice(1)}</p>
                                     <p>#{showPokemon.number}</p>
                                 </div>
                             </div>
-
 
                             <div className="lineTwo">
                                 <img src={showPokemon.sprite} alt="" />
@@ -39,7 +38,7 @@ const DisplayPokemon = ({showPokemon}) => {
                             <div className="wrapperBorder"> 
                                 <div className="lineThree">
                                     <p><span>Weight:</span> {Math.round(showPokemon.weight * 0.22)}lbs</p>
-                                    <p><span>Height:</span>  {convertInchesToFeetAndInches(pokemonHeight)}</p>
+                                    <p><span>Height:</span> {convertInchesToFeetAndInches(pokemonHeight)}</p>
                                 </div>
                             </div>    
 
@@ -53,13 +52,12 @@ const DisplayPokemon = ({showPokemon}) => {
                             <div className="lineFive">
                                 <p>{showPokemon.bio.flavor_text}</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
             }
         </div>
     )
-}
+};
 
 export default DisplayPokemon;

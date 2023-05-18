@@ -15,16 +15,16 @@ const Form = (props) => {
     }
 
     return (
+
         <div className="formSection">
             <div className="wrapper">
                 <form action="" onSubmit={handleSubmit}>
-                    <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokemon or #!" />
-                    <button>Search!</button>
+                    <input type="text" id="pokemon" onChange={handleUserInput} value={userInput} placeholder="Enter a Pokémon name or number!" />
+                    <button>Search</button>
                 </form>    
             </div>
         </div>
-        )
-
-}
+    )
+};
 
 export default Form;

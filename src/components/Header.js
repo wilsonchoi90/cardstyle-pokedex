@@ -4,7 +4,7 @@ const Header = () => {
 
         <div className="header">
             <div className="wrapper">
-                <h1>Card-Style Pokedex!</h1>
+                <h1>Card-Style Pokédex!</h1>
             </div>
         </div>
 
