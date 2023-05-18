@@ -202,7 +202,8 @@ form button {
     background-image: url(../public/pokeball.png);
     background-position: center;
     font-size: 0.6rem;
-    color: #fff;
+    color: #ffcc00;
+    border: 2px solid #000;
     border-radius: 50%;
     width: 50px;
     height: 50px;
