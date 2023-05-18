@@ -169,27 +169,6 @@ span {
     margin: 10px 0;
 }
 
-@media (max-width: 495px) {
-
-    .header h1 {
-        font-size: 3.5rem;
-        letter-spacing: 0.4rem;
-        -webkit-text-stroke: 4px #2b6eb6;
-    }
-
-    .wrapperSpecial,
-    .pokemonCardContainer, 
-    .pokemonCardDisplay {
-        width: 100%;
-    }
-
-    .lineThree,
-    .lineFour,
-    .lineFive p {
-        font-size: 0.8rem;
-    }
-}
-
 form input {
     height: 50px;
 }
@@ -207,4 +186,32 @@ form button {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+
+@media (max-width: 495px) {
+
+    .header h1 {
+        font-size: 3.5rem;
+        letter-spacing: 0.4rem;
+        -webkit-text-stroke: 4px #2b6eb6;
+    }
+
+    .wrapperSpecial,
+    .pokemonCardContainer,
+    .pokemonCardDisplay {
+        width: 100%;
+    }
+
+    .lineThree,
+    .lineFour,
+    .lineFive p {
+        font-size: 0.8rem;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
