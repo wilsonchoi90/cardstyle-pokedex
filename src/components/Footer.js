@@ -4,7 +4,7 @@ const Footer = () => {
 
         <div className="footerSection">
             <div className="wrapper">
-                <p>Copyright&copy; 2023. Created at Juno College of Technology</p>
+                <p>Made by Wilson Choi Copyright&copy; 2023. Created at Juno College of Technology</p>
             </div>
         </div>
 
